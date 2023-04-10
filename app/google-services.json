@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "259500833488",
+    "project_id": "authentication-project-17ab5",
+    "storage_bucket": "authentication-project-17ab5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259500833488:android:b5a18dec65d5733bc9fcd5",
+        "android_client_info": {
+          "package_name": "com.example.authentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259500833488-0i3h16fa6i5m5ptc3in6slbe34tpee9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-BICgLnt5jW_C5Kpw5AdsWwt7Y3Neukg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259500833488-0i3h16fa6i5m5ptc3in6slbe34tpee9i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259500833488:android:671ea5a9e53d523fc9fcd5",
+        "android_client_info": {
+          "package_name": "com.example.coroutinetutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259500833488-0i3h16fa6i5m5ptc3in6slbe34tpee9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-BICgLnt5jW_C5Kpw5AdsWwt7Y3Neukg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259500833488-0i3h16fa6i5m5ptc3in6slbe34tpee9i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259500833488:android:9b445c8b51c33aeec9fcd5",
+        "android_client_info": {
+          "package_name": "com.example.sellingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259500833488-0i3h16fa6i5m5ptc3in6slbe34tpee9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-BICgLnt5jW_C5Kpw5AdsWwt7Y3Neukg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259500833488-0i3h16fa6i5m5ptc3in6slbe34tpee9i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

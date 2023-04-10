@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/menu_settings" />
+        <item
+            android:id="@+id/baseline_sell"
+            android:icon="@drawable/baseline_sell_24"
+            android:title="@string/sell_your_products" />
+        <item
+            android:id="@+id/Chats"
+            android:icon="@drawable/ic_chat"
+            android:title="chats" />
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/power_off"
+            android:title="@string/log_out" />
+
+    </group>
+</menu>

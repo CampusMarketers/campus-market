@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_bg"
+    android:orientation="vertical"
+    android:outlineProvider="bounds">
+
+    <Toolbar
+        android:id="@+id/CategoryTool"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#00BCD4"
+        >
+
+        <ImageButton
+
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:text="Category"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <android.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginRight="0dp"
+
+
+            android:queryHint="Search items"
+            android:stateListAnimator="@android:anim/accelerate_interpolator" />
+
+    </Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/childRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:layout_below="@+id/CategoryTool"
+        app:spanCount="2">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

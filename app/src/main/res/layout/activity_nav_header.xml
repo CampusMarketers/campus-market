@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/light_bg"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+
+        android:id="@+id/Tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/app_blue"
+        android:elevation="10dp"
+        app:tabIndicatorColor="@color/app_blue"
+        app:tabSelectedTextColor="@color/app_blue"
+        app:tabTextColor="@color/app_blue" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/back_arrow"
+                android:layout_marginStart="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="48dp"
+                android:text="Update profile"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/addButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/baseline_check_24" />
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@id/Tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/lin1"
+            android:layout_below="@id/Tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="32dp"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:text="Aamir Siddiqui"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginTop="24dp"
+                android:id="@+id/profile_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile"
+                app:civ_border_color="@color/app_blue"
+                app:civ_border_width="2dp"
+                tools:ignore="MissingClass" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_name_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                app:boxStrokeColor="@color/app_blue"
+                app:hintTextColor="@color/app_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tv_profile_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Update your name"
+                    android:textColor="@color/black"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_age_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="6dp"
+                app:boxStrokeColor="@color/app_blue"
+                app:hintTextColor="@color/app_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tv_profile_age"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint="Update your age (optional)"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/gender_spinner_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="36dp"
+                app:hintTextColor="@color/app_blue"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/app_blue">
+
+                <AutoCompleteTextView
+                    android:id="@+id/txt_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:text="Gender (optional)"
+                    android:textStyle="italic" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
+
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:padding="16dp"-->
+<!--    tools:context=".NavHeaderActivity">-->
+
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/profile_image"-->
+<!--        android:layout_width="96dp"-->
+<!--        android:layout_height="96dp"-->
+<!--        android:src="@drawable/images"-->
+<!--        app:civ_border_width="2dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        app:civ_border_color="#FF000000"-->
+<!--        tools:ignore="MissingClass"-->
+<!--        />-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/profile_name_layout"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="16dp"-->
+<!--        android:layout_marginTop="27dp"-->
+<!--        app:boxStrokeColor="@color/yellow"-->
+<!--        app:hintTextColor="@color/yellow">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/tv_profile_name"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="type_your_name"-->
+<!--            android:inputType="textPersonName" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+<!--    <TextView-->
+<!--        android:id="@+id/currentName"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:text="Current Name :"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="24sp"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/error"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="12sp"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="22dp"-->
+<!--        android:text="Save"-->
+<!--        android:layout_gravity="center"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/heart"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/heart"-->
+<!--        android:layout_marginTop="36dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        />-->
+
+<!--</LinearLayout>-->

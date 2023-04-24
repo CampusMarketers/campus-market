@@ -11,6 +11,7 @@ import com.example.sellingapp.model.UserItemData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.squareup.picasso.Picasso
+import java.util.*
 
 class OrderPage : AppCompatActivity() {
 
@@ -65,10 +66,12 @@ class OrderPage : AppCompatActivity() {
                                                 FirebaseDatabase.getInstance().reference.child("User")
                                                     .child(item.userUid.toString()).child("Friends")
                                                     .child(FirebaseAuth.getInstance().currentUser!!.uid)
+                                            val date = Date()
                                             var friendUid2 =
                                                 ItemCategory(FirebaseAuth.getInstance().currentUser!!.uid,
                                                     user.userName,
-                                                    user.userImage)
+                                                    user.userImage,date.time
+                                                )
                                             db2.setValue(friendUid2)
                                             Toast.makeText(this@OrderPage,
                                                 "Friend Added Successfully",

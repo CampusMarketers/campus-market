@@ -32,7 +32,7 @@ class Customers : AppCompatActivity() {
 
 
         db = FirebaseDatabase.getInstance().getReference("User").child(FirebaseAuth.getInstance().currentUser!!.uid).child("Friends")
-        query = db.orderByChild("category")
+        query = db.orderByChild("timeStamp")
 
         adapter = ItemAdapter(listOf())
         binding.customerRecycler.adapter = adapter
@@ -43,7 +43,7 @@ class Customers : AppCompatActivity() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val items = mutableListOf<ItemCategory>()
 
-                    for (data in snapshot.children) {
+                    for (data in snapshot.children.reversed()) {
                         val item = data.getValue(ItemCategory::class.java)
                         if (item != null) {
                             items.add(item)

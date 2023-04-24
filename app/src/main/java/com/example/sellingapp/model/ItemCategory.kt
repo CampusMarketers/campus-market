@@ -7,7 +7,7 @@ data class ItemCategory(
     val catUid: String? = null,
     val category: String? = null,
     val catPicUrl:String?=null,
-    val timeStamp:Long?=null
+    val timeStamp:Long?=0
 
 ):Parcelable {
     constructor(parcel: Parcel) : this(

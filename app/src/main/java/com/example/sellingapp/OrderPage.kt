@@ -61,21 +61,20 @@ class OrderPage : AppCompatActivity() {
 
                                         // Do something with the retrieved user data
                                         if (user != null) {
-
+                                            val date=Date()
                                             db2 =
                                                 FirebaseDatabase.getInstance().reference.child("User")
                                                     .child(item.userUid.toString()).child("Friends")
                                                     .child(FirebaseAuth.getInstance().currentUser!!.uid)
-                                            val date = Date()
+
                                             var friendUid2 =
                                                 ItemCategory(FirebaseAuth.getInstance().currentUser!!.uid,
                                                     user.userName,
-                                                    user.userImage,date.time
+                                                    user.userImage,
+                                                    date.time
                                                 )
                                             db2.setValue(friendUid2)
-                                            Toast.makeText(this@OrderPage,
-                                                "Friend Added Successfully",
-                                                Toast.LENGTH_SHORT).show()
+
                                         }
                                     } else {
                                         // Data does not exist for the current user
@@ -109,10 +108,15 @@ class OrderPage : AppCompatActivity() {
                                                     .child(FirebaseAuth.getInstance().currentUser!!.uid)
                                                     .child("Friends")
                                                     .child(item.userUid.toString())
+                                            val date=Date()
                                             var friendUid = ItemCategory(item.userUid.toString(),
                                                 user.userName.toString(),
-                                                user.userImage.toString())
+                                                user.userImage.toString(),
+                                             date.time)
                                             db2.setValue(friendUid)
+                                            Toast.makeText(this@OrderPage,
+                                                user.userName+" Added Successfully",
+                                                Toast.LENGTH_SHORT).show()
                                         }
                                     } else {
                                         // Data does not exist for the current user
@@ -138,21 +142,10 @@ class OrderPage : AppCompatActivity() {
             else{
                 Toast.makeText(this,"item is null error",Toast.LENGTH_SHORT).show()
             }
-//            if(item!=null) {
-//                db = FirebaseDatabase.getInstance().reference.child("User")
-//                    .child(FirebaseAuth.getInstance().currentUser!!.uid).child("Friends")
-//                    .child(item.userUid.toString())
-//                var friendUid=ImageData(item.userUid.toString())
-//                db.setValue(friendUid)
-//             db2=FirebaseDatabase.getInstance().reference.child("User")
-//                 .child(item.userUid.toString()).child("Friends")
-//                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
-//               var friendUid2=ImageData(FirebaseAuth.getInstance().currentUser!!.uid)
-//                db2.setValue(friendUid2)
-//                Toast.makeText(this,"Friend Added Successfully",Toast.LENGTH_SHORT).show()
-//
-//            }
 
+            val intent =Intent(this,Customers::class.java)
+            startActivity(intent)
+            finish()
         }
 
     }

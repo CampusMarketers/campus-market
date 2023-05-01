@@ -5,6 +5,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="#00BCD4"
     android:padding="16dp">
 
 
@@ -13,7 +15,7 @@
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_gravity="center"
-        android:src="@drawable/images"
+        android:src="@drawable/router"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
         tools:ignore="MissingClass" />
@@ -25,6 +27,6 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="16dp"
-
+         android:textColor="@color/white"
         android:text="UserName" />
 </LinearLayout>

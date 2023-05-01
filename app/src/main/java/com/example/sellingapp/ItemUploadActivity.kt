@@ -56,6 +56,11 @@ class ItemUploadActivity : AppCompatActivity() {
         }
         var imageUrl2: String = ""
         val currentUser = FirebaseAuth.getInstance().currentUser
+        binding.backButton.setOnClickListener {
+            var intent= Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         binding.saveButton.setOnClickListener {
 //            if(imageUrl==null || binding.itemPrice==null || binding.itemName==null || binding.itemDescription==null || binding.txtCategory.text.toString().length==null) {
 //                Toast.makeText(this, "Empty fields are not allowed.", Toast.LENGTH_SHORT).show()

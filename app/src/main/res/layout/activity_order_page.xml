@@ -5,19 +5,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderPage">
+    tools:context=".OrderPage"
+    android:gravity="center_horizontal"
+    android:background="@drawable/light_bg">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#00BCD4"
+        android:gravity="center_vertical">
 
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/home" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="48dp"
+            android:text="Campus Market"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            >
+            android:gravity="center_horizontal">
+
             <ImageView
                 android:id="@+id/item_images"
                 android:layout_width="match_parent"
@@ -25,21 +64,24 @@
 
 
                 />
+
             <TextView
                 android:id="@+id/description_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
                 android:layout_marginTop="12dp"
-                android:textColor="@color/black"
-                android:text=" hi lite Essential premium type C to 2x usb 3.0 ,card reader,4k Hdmi,connectro"/>
+                android:background="#00BCD4"
+                android:text=" hi lite Essential premium type C to 2x usb 3.0 ,card reader,4k Hdmi,connectro"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
 
-                android:layout_marginTop="12dp">
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/star1"
                     android:layout_width="wrap_content"
@@ -75,34 +117,30 @@
                     android:src="@drawable/ic_star_full"
                     tools:src="@drawable/ic_star_full" />
             </LinearLayout>
+
             <TextView
                 android:id="@+id/cost_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="32dp"
-                android:text="2800"
                 android:layout_marginTop="12dp"
-                android:textColor="@color/black"
-                android:drawableLeft="@drawable/ic_baseline_currency_rupee_24"
-                />
+                android:drawableLeft="@drawable/baseline_currency_rupee_24"
+                android:text="2800"
+                android:background="#00BCD4"
+                android:textColor="@color/white"
+                android:textSize="32dp" />
+            <Button
+                android:id="@+id/chatWithOwner"
+                android:gravity="center"
+
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bck_sample"
+
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="32dp"
+                android:text="Chat Owner"/>
         </LinearLayout>
     </ScrollView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/chatWithOwner"
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:layout_marginRight="5dp"
-            android:text="Chat Owner"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Buy now"/>
-    </LinearLayout>
+
+</RelativeLayout>
 </RelativeLayout>

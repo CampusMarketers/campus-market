@@ -8,138 +8,193 @@
     android:orientation="vertical"
     tools:context=".ItemUploadActivity">
 
-    <ScrollView
-        android:id="@+id/scrollView"
+    <RelativeLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="54dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#00BCD4"
+        android:gravity="center_vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/home" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="48dp"
+            android:text="Campus Market"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/light_bg"
+           android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:id="@+id/item_layout"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical"
-                android:padding="12dp">
-
-                <ImageView
-                    android:id="@+id/item_image"
-                    android:layout_width="195dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/images" />
-            </LinearLayout>
-
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:orientation="horizontal"
-                android:layout_margin="16dp">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/spinner_layout"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <AutoCompleteTextView
-                        android:id="@+id/txt_category"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:inputType="none"
-                        android:text="Select Item Category"
-                        android:textStyle="italic" />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/item_name_layout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/spinner_layout"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="40dp"
-                app:boxStrokeColor="@color/yellow"
-                app:hintTextColor="@color/yellow">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/item_name"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Type item model..."
-                    android:inputType="textEmailAddress" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/item_price_layout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/item_name_layout"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="10dp"
-                app:boxStrokeColor="@color/yellow"
-                app:hintTextColor="@color/yellow">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/item_price"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Type item price here.."
-                    android:inputType="textEmailAddress" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/item_description_layout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/item_price_layout"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="10dp"
-                app:boxStrokeColor="@color/yellow"
-                app:hintTextColor="@color/yellow">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/item_description"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Type item description here.."
-                    android:inputType="textEmailAddress" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <LinearLayout
-                android:id="@+id/item_save_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/save_button"
-                    android:layout_width="240dp"
+                <LinearLayout
+                    android:id="@+id/item_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/item_image"
+                        android:layout_width="195dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/images" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="32dp"
-                    android:text="Save" />
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/spinner_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        app:boxCornerRadiusBottomEnd="20dp"
+                        android:layout_height="wrap_content">
+
+                        <AutoCompleteTextView
+
+                            android:id="@+id/txt_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#00BCD4"
+                            android:textColor="@color/white"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:text="Select Item Category"
+                            android:textStyle="italic" />
 
 
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/item_name_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spinner_layout"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="40dp"
+                    app:boxStrokeColor="@color/yellow"
+
+                    app:hintTextColor="@color/yellow">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/item_name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00BCD4"
+
+                        android:hint="Type item model..."
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/item_price_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/item_name_layout"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    app:boxStrokeColor="@color/yellow"
+                    app:hintTextColor="@color/yellow">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/item_price"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00BCD4"
+
+                        android:hint="Type item price here.."
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/item_description_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/item_price_layout"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+
+                    app:boxStrokeColor="@color/yellow"
+                    app:hintTextColor="@color/yellow">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/item_description"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00BCD4"
+                        android:textColorHint="@color/white"
+                        android:hint="Type item description here.."
+
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/item_save_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/save_button"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/bck_sample"
+
+                        android:text="Save" />
+
+
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+
+    </RelativeLayout>
 
 </RelativeLayout>
+
+

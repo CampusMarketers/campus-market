@@ -134,7 +134,7 @@ class MainActivity : AppCompatActivity() {
                                 profileTextView.text = user.userName.toString()
                                 Picasso.get()
                                     .load(user.userImage)
-                                    .placeholder(R.drawable.images) // Optional placeholder image
+                                    .placeholder(R.drawable.router) // Optional placeholder image
 //                                .error(R.drawable.error) // Optional error image
                                     .fit()
                                     .centerCrop()

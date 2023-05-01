@@ -40,7 +40,11 @@ class OrderPage : AppCompatActivity() {
                 .into(binding.itemImages)
             // var catName: String = item.category.toString().capitalize()
         }
-
+        binding.backButton.setOnClickListener {
+            var intent= Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         binding.chatWithOwner.setOnClickListener{
 //            var intent=Intent(this,OwnerChat::class.java)
 //            intent.putExtra("item",item)

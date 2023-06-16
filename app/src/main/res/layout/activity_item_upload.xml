@@ -110,7 +110,7 @@
                     android:layout_marginTop="40dp"
                     app:boxStrokeColor="@color/yellow"
 
-                    app:hintTextColor="@color/yellow">
+                    app:hintTextColor="@color/black">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/item_name"
@@ -133,7 +133,7 @@
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="10dp"
                     app:boxStrokeColor="@color/yellow"
-                    app:hintTextColor="@color/yellow">
+                    app:hintTextColor="@color/black">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/item_price"
@@ -156,7 +156,7 @@
                     android:layout_marginTop="10dp"
 
                     app:boxStrokeColor="@color/yellow"
-                    app:hintTextColor="@color/yellow">
+                    app:hintTextColor="@color/black">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/item_description"

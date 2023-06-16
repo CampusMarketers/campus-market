@@ -34,7 +34,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Type your Email"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:background="#00BCD4"
+                    android:textColor="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -58,25 +60,35 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Type Your Password"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:background="#00BCD4"
+                    android:textColor="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:id="@+id/btnSignIn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="16dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:background="@color/yellow"-->
+<!--                android:text="Sign In"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />-->
+            <Button
                 android:id="@+id/btnSignIn"
-                android:layout_width="match_parent"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="32dp"
-                android:background="@color/yellow"
-                android:text="Sign In"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
+                android:background="@drawable/bck_sample"
 
+                android:text="Sign in" />
             <TextView
                 android:id="@+id/clkToSignUP"
                 android:layout_width="wrap_content"
@@ -107,14 +119,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
 
-                android:background="@color/black"
-                android:drawableLeft="@drawable/search"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/googleg_standard_color_18"
                 android:gravity="center"
+                android:shadowColor="@color/black"
                 android:paddingLeft="100dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="10dp"
                 android:text="Google"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"
 
                 />

@@ -4,11 +4,11 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class UserItemData(
-    val itemImageId: String? = null,
+    val downloadedImageUrl: String? = null,
     val itemName: String? = null,
     val userUid: String? = null,
     val itemId: String? = null,
-    val userDescription: String? = null,
+    val itemDescription: String? = null,
     val itemTimeStamp: Long? = null,
     val itemPrice: String? = null
 ):Parcelable {
@@ -23,11 +23,11 @@ data class UserItemData(
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(itemImageId)
+        parcel.writeString(downloadedImageUrl)
         parcel.writeString(itemName)
         parcel.writeString(userUid)
         parcel.writeString(itemId)
-        parcel.writeString(userDescription)
+        parcel.writeString(itemDescription)
         parcel.writeValue(itemTimeStamp)
         parcel.writeString(itemPrice)
     }

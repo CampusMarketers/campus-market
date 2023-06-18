@@ -61,7 +61,7 @@ class SellActivity : AppCompatActivity() {
             adapter.onItemClick = {
 
                 val intent = Intent(this, FullScreenImage::class.java)
-                intent.putExtra("item", it.itemImageId)
+                intent.putExtra("item", it.downloadedImageUrl)
                 startActivity(intent)
 
 

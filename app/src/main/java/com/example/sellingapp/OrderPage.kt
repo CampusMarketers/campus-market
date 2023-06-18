@@ -30,10 +30,10 @@ class OrderPage : AppCompatActivity() {
         if (item != null) {
 //         val nameTextView = findViewById<TextView>(R.id.tvName)
             //val descriptionTextView = findViewById<TextView>(R.id.tvDescription)
-            binding.descriptionText.text = item.userDescription.toString().capitalize()
+            binding.descriptionText.text = item.itemDescription.toString().capitalize()
             binding.costView.text = item.itemPrice
             Picasso.get()
-                .load(item.itemImageId)
+                .load(item.downloadedImageUrl)
                 .placeholder(R.drawable.images)
                 .fit()
                 .centerCrop()

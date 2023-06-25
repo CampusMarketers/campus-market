@@ -41,12 +41,12 @@ class ItemUploadActivity : AppCompatActivity() {
         dialog.setContentView(R.layout.progress_layout)
         dialog.setCancelable(false)
 
-//        binding.backButton.setOnClickListener {
-//
-//            val intent= Intent(this,MainActivity::class.java)
+        binding.backButton.setOnClickListener {
+
+//            val intent= Intent(this,SellActivity::class.java)
 //            startActivity(intent)
-//            finish()
-//        }
+            finish()
+        }
 
         binding.itemImage.setOnClickListener {
 
@@ -62,7 +62,10 @@ class ItemUploadActivity : AppCompatActivity() {
             val itemName = binding.itemName.text.toString().trim()
             val itemPrice = binding.itemPrice.text.toString().trim()
             val itemDescription = binding.itemDescription.text.toString().trim()
-            if (imageUrl != null && category != "Select Item Category" && itemName.isNotEmpty() && itemPrice.isNotEmpty() && itemDescription.isNotEmpty()) {
+
+            val priceValue = itemPrice.toDoubleOrNull()
+
+            if (priceValue != null && imageUrl != null && category != "Select Item Category" && itemName.isNotEmpty() && itemPrice.isNotEmpty() && itemDescription.isNotEmpty()) {
 
 //                uploadImage(imageUrl!!)
                 dialog.show()
@@ -121,8 +124,8 @@ class ItemUploadActivity : AppCompatActivity() {
                             }
 
                             dialog.dismiss()
-                            val intent = Intent(this, SellActivity::class.java)
-                            startActivity(intent)
+//                            val intent = Intent(this, SellActivity::class.java)
+//                            startActivity(intent)
                             finish()
                         }
                     }
@@ -132,7 +135,7 @@ class ItemUploadActivity : AppCompatActivity() {
                     }
             } else {
 
-                Toast.makeText(this, "Empty fields are not allowed.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Invalid/Empty fields are not allowed.", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -162,6 +165,14 @@ class ItemUploadActivity : AppCompatActivity() {
 
             imageUrl = it.data!!.data
             binding.itemImage.setImageURI(imageUrl)
+
+            val desiredWidth = 560 // Replace with your desired width
+            val desiredHeight = 520 // Replace with your desired height
+
+            val layoutParams = binding.itemImage.layoutParams
+            layoutParams.width = desiredWidth
+            layoutParams.height = desiredHeight
+            binding.itemImage.layoutParams = layoutParams
         }
     }
 }

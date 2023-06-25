@@ -81,7 +81,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_view1"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_height="272dp"
                             android:layout_weight="1"
                             android:layout_margin="8dp"
                             app:cardCornerRadius="8dp"
@@ -118,7 +118,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_view2"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_height="272dp"
                             android:layout_weight="1"
                             android:layout_margin="8dp"
                             app:cardCornerRadius="8dp"
@@ -163,7 +163,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_view3"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_height="272dp"
                             android:layout_weight="1"
                             android:layout_margin="8dp"
                             app:cardCornerRadius="8dp"
@@ -200,7 +200,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_view4"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_height="272dp"
                             android:layout_weight="1"
                             android:layout_margin="8dp"
                             app:cardCornerRadius="8dp"
@@ -244,7 +244,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_view5"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_height="272dp"
                             android:layout_weight="1"
                             android:layout_margin="8dp"
                             app:cardCornerRadius="8dp"
@@ -281,7 +281,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_view6"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_height="272dp"
                             android:layout_weight="1"
                             android:layout_margin="8dp"
                             app:cardCornerRadius="8dp"
@@ -306,7 +306,7 @@
                                     android:background="#00BCD4"
 
                                     android:textColor="@color/white"
-                                    android:text="Study table"
+                                    android:text="Study Table"
                                     android:textStyle="bold"
                                     android:gravity="center"
                                     android:textSize="26sp" />
@@ -325,7 +325,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_view7"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_height="272dp"
                             android:layout_weight="1"
                             android:layout_margin="8dp"
                             app:cardCornerRadius="8dp"
@@ -348,9 +348,8 @@
                                     android:layout_height="match_parent"
                                     android:layout_below="@id/image_view7"
                                     android:background="#00BCD4"
-
                                     android:textColor="@color/white"
-                                    android:text="Electrical appliances"
+                                    android:text="Electronics"
                                     android:textStyle="bold"
                                     android:gravity="center"
                                     android:textSize="26sp" />
@@ -362,7 +361,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_view8"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_height="272dp"
                             android:layout_weight="1"
                             android:layout_margin="8dp"
                             app:cardCornerRadius="8dp"
@@ -385,7 +384,6 @@
                                     android:layout_height="match_parent"
                                     android:layout_below="@id/image_view8"
                                     android:background="#00BCD4"
-
                                     android:textColor="@color/white"
                                     android:text="Hardware"
                                     android:textStyle="bold"
@@ -406,7 +404,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_view9"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_height="272dp"
                             android:layout_weight="1"
                             android:layout_margin="8dp"
                             app:cardCornerRadius="8dp"
@@ -429,7 +427,6 @@
                                     android:layout_height="match_parent"
                                     android:layout_below="@id/image_view9"
                                     android:background="#00BCD4"
-
                                     android:textColor="@color/white"
                                     android:text="Books"
                                     android:textStyle="bold"
@@ -443,7 +440,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_view10"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
+                            android:layout_height="272dp"
                             android:layout_weight="1"
                             android:layout_margin="8dp"
                             app:cardCornerRadius="8dp"
@@ -466,7 +463,6 @@
                                     android:layout_height="match_parent"
                                     android:layout_below="@id/image_view10"
                                     android:background="#00BCD4"
-
                                     android:textColor="@color/white"
                                     android:text="Others"
                                     android:textStyle="bold"

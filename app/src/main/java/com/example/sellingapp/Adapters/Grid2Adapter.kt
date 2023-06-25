@@ -8,11 +8,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sellingapp.model.UserItemData
 import com.example.sellingapp.R
-
-
+import com.example.sellingapp.databinding.CardViewActivityBinding
 import com.squareup.picasso.Picasso
 
 class Grid2Adapter(var items: List<UserItemData>) : RecyclerView.Adapter<Grid2Adapter.ViewHolder>() {
+
+    private lateinit var binding: CardViewActivityBinding
 
     var onItemClick:((UserItemData)->Unit)?=null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -38,11 +39,11 @@ class Grid2Adapter(var items: List<UserItemData>) : RecyclerView.Adapter<Grid2Ad
         private val imageView: ImageView = itemView.findViewById(R.id.image_view)
         private val textView: TextView = itemView.findViewById(R.id.text_view)
         fun bind(item: UserItemData) {
-            textView.text = item.itemName
 
+            textView.text = item.itemName
             Picasso.get()
                 .load(item.downloadedImageUrl)
-                .placeholder(R.drawable.ic_profile)
+                .placeholder(R.drawable.baseline_square_24)
                 .fit()
                 .centerCrop()
                 .into(imageView)

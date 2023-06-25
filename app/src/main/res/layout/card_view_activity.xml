@@ -11,7 +11,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view1"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="272dp"
         android:layout_weight="1"
         android:layout_margin="8dp"
         app:cardCornerRadius="8dp"
@@ -34,12 +34,12 @@
                 android:layout_height="match_parent"
                 android:layout_below="@id/image_view"
                 android:background="#00BCD4"
-
+                android:padding="3dp"
                 android:textColor="@color/white"
                 android:text="Cooler"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textSize="26sp" />
+                android:textSize="16sp" />
 
         </RelativeLayout>
 

@@ -39,10 +39,10 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:background="@drawable/light_bg"
-           android:layout_below="@id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
@@ -56,39 +56,38 @@
                 <LinearLayout
                     android:id="@+id/item_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="320dp"
+                    android:background="@drawable/light_bg"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-                    android:padding="12dp">
+                    android:padding="16dp">
 
                     <ImageView
                         android:id="@+id/item_image"
-                        android:layout_width="195dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
                         android:src="@drawable/images" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:orientation="horizontal"
-                    android:layout_margin="16dp">
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/spinner_layout"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                         android:layout_width="match_parent"
-                        app:boxCornerRadiusBottomEnd="20dp"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        app:boxCornerRadiusBottomEnd="20dp">
 
                         <AutoCompleteTextView
-
                             android:id="@+id/txt_category"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="#00BCD4"
-                            android:textColor="@color/white"
                             android:layout_weight="1"
                             android:inputType="none"
                             android:text="Select Item Category"
@@ -107,9 +106,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/spinner_layout"
                     android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="40dp"
-                    app:boxStrokeColor="@color/yellow"
-
+                    android:layout_marginTop="8dp"
+                    app:boxStrokeColor="#00BCD4"
                     app:hintTextColor="@color/black">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -117,11 +115,10 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#00BCD4"
-
                         android:hint="Type item model..."
                         android:inputType="textEmailAddress"
-                        android:textColor="@color/white" />
+                        android:maxLength="16"
+                        android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -132,7 +129,7 @@
                     android:layout_below="@+id/item_name_layout"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="10dp"
-                    app:boxStrokeColor="@color/yellow"
+                    app:boxStrokeColor="#00BCD4"
                     app:hintTextColor="@color/black">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -140,10 +137,10 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#00BCD4"
-
-                        android:hint="Type item price here.."
-                        android:inputType="textEmailAddress" />
+                        android:autofillHints="value"
+                        android:hint="Price in Rupees"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -154,8 +151,8 @@
                     android:layout_below="@+id/item_price_layout"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="10dp"
-
-                    app:boxStrokeColor="@color/yellow"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="#00BCD4"
                     app:hintTextColor="@color/black">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -163,11 +160,10 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#00BCD4"
-                        android:textColorHint="@color/white"
-                        android:hint="Type item description here.."
-
-                        android:inputType="textEmailAddress" />
+                        android:autofillHints="value"
+                        android:hint="Description"
+                        android:maxLength="100"
+                        android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -175,6 +171,7 @@
                     android:id="@+id/item_save_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 
@@ -185,7 +182,6 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="32dp"
                         android:background="@drawable/bck_sample"
-
                         android:text="Save" />
 
 

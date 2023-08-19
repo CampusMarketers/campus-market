@@ -22,9 +22,16 @@
             app:srcCompat="@drawable/back_arrow" />
     </Toolbar>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+        android:gravity="center">
     <ImageView
         android:id="@+id/fullPhoto"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/laptop"
         android:layout_below="@+id/toolBar"/>
+    </LinearLayout>
 </RelativeLayout>

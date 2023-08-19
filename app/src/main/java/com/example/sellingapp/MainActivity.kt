@@ -14,6 +14,7 @@ import androidx.core.view.GravityCompat
 import com.example.sellingapp.Adapters.ItemAdapter
 import com.example.sellingapp.databinding.ActivityMainBinding
 import com.example.sellingapp.model.ItemCategory
+import com.example.sellingapp.model.User
 import com.example.sellingapp.model.UserData
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -120,7 +121,7 @@ class MainActivity : AppCompatActivity() {
         val database: DatabaseReference = FirebaseDatabase.getInstance().reference
         val currentUser = FirebaseAuth.getInstance().currentUser
         try {
-            database.child("User").child(currentUser!!.uid)
+            database.child("User").child(currentUser!!.uid).child("Detail")
                 .addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
                         if (snapshot.exists()) {
@@ -134,7 +135,7 @@ class MainActivity : AppCompatActivity() {
                                 profileTextView.text = user.userName.toString()
                                 Picasso.get()
                                     .load(user.userImage)
-                                    .placeholder(R.drawable.router) // Optional placeholder image
+                                    .placeholder(R.drawable.profile) // Optional placeholder image
 //                                .error(R.drawable.error) // Optional error image
                                     .fit()
                                     .centerCrop()
@@ -155,30 +156,30 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-//        val databaseReference = FirebaseDatabase.getInstance().getReference("Items")
+        val databaseReference = FirebaseDatabase.getInstance().getReference("Items")
 //
 //
-//        val cat1 = ItemCategory("1","cooler")
-//        databaseReference.child("Cooler").setValue(cat1)
-//
-//        val cat2 = ItemCategory("2","cycle")
-//        databaseReference.child("Cycle").setValue(cat2)
-//        val cat3 = ItemCategory("3","mattress")
-//        databaseReference.child("Mattress").setValue(cat3)
-//        val cat4 = ItemCategory("4","drafter")
-//        databaseReference.child("Drafter").setValue(cat4)
-//        val cat5 = ItemCategory("5","study table")
-//        databaseReference.child("Study Table").setValue(cat5)
-//        val cat6 = ItemCategory("6","router")
-//        databaseReference.child("Router").setValue(cat6)
-//        val cat7 = ItemCategory("7","electronics")
-//        databaseReference.child("Electronics").setValue(cat7)
-//        val cat8 = ItemCategory("8","hardware")
-//        databaseReference.child("Hardware").setValue(cat8)
-//        val cat10 = ItemCategory("10","books")
-//        databaseReference.child("Books").setValue(cat10)
-//        val cat9 = ItemCategory("9","others")
-//        databaseReference.child("Others").setValue(cat9)
+        val cat1 = ItemCategory("1","cooler")
+        databaseReference.child("Cooler").setValue(cat1)
+
+        val cat2 = ItemCategory("2","cycle")
+        databaseReference.child("Cycle").setValue(cat2)
+        val cat3 = ItemCategory("3","mattress")
+        databaseReference.child("Mattress").setValue(cat3)
+        val cat4 = ItemCategory("4","drafter")
+        databaseReference.child("Drafter").setValue(cat4)
+        val cat5 = ItemCategory("5","study table")
+        databaseReference.child("Study Table").setValue(cat5)
+        val cat6 = ItemCategory("6","router")
+        databaseReference.child("Router").setValue(cat6)
+        val cat7 = ItemCategory("7","electronics")
+        databaseReference.child("Electronics").setValue(cat7)
+        val cat8 = ItemCategory("8","hardware")
+        databaseReference.child("Hardware").setValue(cat8)
+        val cat10 = ItemCategory("10","books")
+        databaseReference.child("Books").setValue(cat10)
+        val cat9 = ItemCategory("9","others")
+        databaseReference.child("Others").setValue(cat9)
 
 
 
@@ -293,7 +294,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_log_out -> {
                     // Handle the settings action
                     Firebase.auth.signOut()
-                    val intent = Intent(this, SignInActivity::class.java)
+                    val intent = Intent(this, DemoLoginActivity::class.java)
                     startActivity(intent)
                     finish()
                 }

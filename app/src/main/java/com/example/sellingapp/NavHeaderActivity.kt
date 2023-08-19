@@ -52,8 +52,8 @@ class NavHeaderActivity : AppCompatActivity() {
 
         binding.backButton.setOnClickListener {
 
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
             finish()
         }
 
@@ -78,6 +78,7 @@ class NavHeaderActivity : AppCompatActivity() {
 
         val database = FirebaseDatabase.getInstance().reference
         val currentUser = FirebaseAuth.getInstance().currentUser
+
 
         database.child("User").child(currentUser!!.uid)
             .addListenerForSingleValueEvent(object : ValueEventListener {
@@ -140,8 +141,8 @@ class NavHeaderActivity : AppCompatActivity() {
                     database.child("User").child(FirebaseAuth.getInstance().currentUser!!.uid)
                         .setValue(userData)
                     dialog.dismiss()
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+//                    val intent = Intent(this, MainActivity::class.java)
+//                    startActivity(intent)
                     finish()
                 }
             }
